@@ -27,7 +27,7 @@ extension ProvidersViewController {
 
         self.view.frame = CGRect(x: -Menu.width, y: 0, width: Menu.width, height: frame.height)
 
-        self.view.autoresizingMask = .flexibleRightMargin
+        self.view.autoresizingMask = [.flexibleRightMargin, .flexibleHeight]
 
         viewController.view.addSubview(self.view)
 
@@ -46,7 +46,7 @@ extension ProvidersViewController {
                                     width: UIScreen.main.bounds.width - view.frame.width,
                                     height: view.frame.height))
         
-        Menu.mask?.autoresizingMask = .flexibleWidth
+        Menu.mask?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         Menu.mask?.backgroundColor = UIColor(colorLiteralRed: 0.7, green: 0.7, blue: 0.7, alpha: 0.3)
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleDidTouch))

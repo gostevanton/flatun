@@ -130,7 +130,7 @@ class DataManager: NSObject {
         
         for dic in dictionary {
             
-            let image = URL(string:(dic["image"] as! String))!
+            let image = URL(string:(dic["image"] as? String)!)!
             
             let height = dic["height"] as! Int
             let width = dic["width"] as! Int
